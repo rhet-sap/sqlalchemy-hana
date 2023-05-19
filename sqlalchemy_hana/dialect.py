@@ -333,7 +333,7 @@ class HANABaseDialect(default.DefaultDialect):
             name = name.upper()
         return name
 
-    def has_table(self, connection, table_name, schema=None):
+    def has_table(self, connection, table_name, schema=None, **kwargs):
         schema = schema or self.default_schema_name
 
         result = connection.execute(
